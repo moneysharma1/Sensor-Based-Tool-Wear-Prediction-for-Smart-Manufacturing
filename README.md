@@ -56,11 +56,12 @@ Models tested:
 ## RESULTS
 
 ### Confusion Matrix
+Low misclassification on unseen data suggests tool state was learnable from available signals.
 
 <img width="498" height="453" alt="image" src="https://github.com/user-attachments/assets/b4e8504a-aef5-46e1-a0ba-8157a9ae149d" />
 
-
 ### Feature Importance
+Usage and vibration variables carried stronger signal than several static settings.
 
 <img width="603" height="433" alt="image" src="https://github.com/user-attachments/assets/0649783b-fb17-44b0-9147-59c65394b81a" />
 
