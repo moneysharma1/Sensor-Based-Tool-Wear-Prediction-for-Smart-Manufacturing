@@ -1,87 +1,78 @@
-# Sensor-Based Tool Wear Prediction for Smart Manufacturing
-Machine learning project for predicting CNC tool wear and maintenance risk using industrial sensor data.
+# CNC Tool Wear Prediction
+
+## ASSESSMENT
+
+Logistic Regression beat Random Forest.
+
+| Model | Accuracy |
+|------|----------|
+| Logistic Regression | 93.3% |
+| Random Forest | 86.7% |
+
+This dataset favored a simpler model.
+
+Most useful signals:
+
+- time  
+- run  
+- spindle vibration
+
+---
+
+## USE
+
+Predicts whether a tool is likely healthy or worn from machine data.
+
+Can support:
+
+- earlier checks  
+- cleaner replacement decisions  
+- lower defect risk
+
+Not a timing model. Condition model.
+
+---
+
+## WHAT WAS DONE
+
+Built a binary classifier using CNC process + sensor data.
+
+Target:
+
+- 0 = Healthy  
+- 1 = Worn
+
+Threshold used:
+
+- VB >= 0.30
+
+Models tested:
+
+- Logistic Regression  
+- Random Forest
+
+---
+
+## PROOF
+
+### Confusion Matrix
+
+<img width="498" height="453" alt="image" src="https://github.com/user-attachments/assets/b4e8504a-aef5-46e1-a0ba-8157a9ae149d" />
 
 
-## Project Overview
+### Feature Importance
 
-Built a machine learning project to predict whether a CNC cutting tool is healthy or worn using sensor and process data.
+<img width="603" height="433" alt="image" src="https://github.com/user-attachments/assets/0649783b-fb17-44b0-9147-59c65394b81a" />
 
-The goal is predictive maintenance: detect wear early and reduce downtime, waste, and unexpected tool failure.
 
-## Dataset Features
+---
 
-Variables used:
+## NEXT
 
-* case
-* run
-* time
-* DOC
-* feed
-* material
-* smcAC
-* smcDC
-* vib_table
-* vib_spindle
-* AE_table
-* AE_spindle
+- wear probability score  
+- severity levels  
+- real-time monitoring
 
-Target variable:
-
-* wear_flag
-  0 = healthy
-  1 = worn
-
-Created using tool wear value `VB >= 0.30`.
-
-## Models Tested
-
-* Logistic Regression
-* Random Forest Classifier
-
-## Results
-
-| Model               | Accuracy |
-| ------------------- | -------- |
-| Logistic Regression | 93.3%    |
-| Random Forest       | 86.7%    |
-
-## Key Findings
-
-* Simpler linear model performed better than Random Forest on current data.
-* Sensor values contain strong predictive signal.
-* Run, time, and spindle vibration showed high importance.
-
-## Project Structure
-
-```text
-notebooks/
-models/
-README.md
-requirements.txt
-```
-
-## How to Run
-
-```bash
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Open the notebook and run cells in order.
-
-## Business Value
-
-This type of system can help factories:
-
-* Schedule maintenance earlier
-* reduce machine stoppage
-* lower scrap cost
-* improve production planning
-
-## Author
+---
 
 Money Sharma
-
-Applied Artificial Intelligence
-TH Rosenheim
-
