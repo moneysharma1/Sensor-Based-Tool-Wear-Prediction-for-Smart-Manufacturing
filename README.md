@@ -21,7 +21,7 @@ Most useful signals:
 
 ## USE
 
-Predicts whether a tool is likely healthy or worn from machine data.
+Predict whether a tool is likely healthy or worn from machine data.
 
 Can support:
 
@@ -64,14 +64,6 @@ Models tested:
 
 <img width="603" height="433" alt="image" src="https://github.com/user-attachments/assets/0649783b-fb17-44b0-9147-59c65394b81a" />
 
-
----
-
-## NEXT
-
-- wear probability score  
-- severity levels  
-- real-time monitoring
 
 ---
 
