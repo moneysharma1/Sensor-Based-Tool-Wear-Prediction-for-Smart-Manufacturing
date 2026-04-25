@@ -33,7 +33,7 @@ Not a timing model. Condition model.
 
 ---
 
-## WHAT WAS DONE
+## APPROACH
 
 Built a binary classifier using CNC process + sensor data.
 
