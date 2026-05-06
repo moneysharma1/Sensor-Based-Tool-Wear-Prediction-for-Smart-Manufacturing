@@ -21,7 +21,7 @@ Most useful signals:
 
 ## USE
 
-Predict whether a tool is likely healthy or worn from machine data.
+Predict whether a tool classifies as healthy or worn from machine data.
 
 Can support:
 
