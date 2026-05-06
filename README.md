@@ -65,27 +65,30 @@ Usage and vibration variables carried stronger signal than several static settin
 
 <img width="603" height="433" alt="image" src="https://github.com/user-attachments/assets/0649783b-fb17-44b0-9147-59c65394b81a" />
 
-## Current Project Status
 
-This project currently works as a condition classification model.  
-It predicts whether a CNC tool is likely healthy or worn based on sensor and process data.
+## Project Scope
 
-The model does not yet estimate failure time or Remaining Useful Life (RUL). It is focused on classifying the current tool condition.
+This project is a condition classification model for CNC tool wear.
 
-## Next Development Step
+It uses CNC sensor and process data to classify tool condition as `healthy` or `worn` based on a defined wear threshold.
 
-The next practical step is to turn the trained model into a usable prediction service.
+The target label was derived from `VB` because `VB` directly represents measured tool wear. Other variables such as vibration, acoustic emission, spindle current, feed, depth of cut, run, and time were used as input features because they describe machine behavior and process conditions related to wear.
 
-Planned work for the next version:
+The project focuses on:
+- converting measured tool wear into classification labels
+- comparing Logistic Regression and Random Forest
+- evaluating model performance using classification metrics
+- interpreting feature influence on the prediction
 
-1. Save the trained model using `joblib`.
-2. Create a FastAPI endpoint for model prediction.
-3. Accept CNC sensor and process values as JSON input.
-4. Return a prediction such as `healthy` or `worn`.
-5. Add example API requests and responses to the README.
-6. Move reusable preprocessing and prediction logic from the notebook into Python scripts.
+This is not a Remaining Useful Life model.  
+It does not predict failure time or remaining operating time.
 
+## Next Development Direction
 
----
+The next development direction is Remaining Useful Life estimation.
+
+This reframes the project from condition classification to time-to-failure prediction. Instead of classifying the current tool state as `healthy` or `worn`, the goal is to estimate the remaining operating time before the tool reaches a critical wear condition.
+
+A further extension is failure-mode classification, where the model identifies the failure type or affected component if suitable labeled data is available.
 
 Money Sharma
