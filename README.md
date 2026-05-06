@@ -65,6 +65,26 @@ Usage and vibration variables carried stronger signal than several static settin
 
 <img width="603" height="433" alt="image" src="https://github.com/user-attachments/assets/0649783b-fb17-44b0-9147-59c65394b81a" />
 
+## Current Project Status
+
+This project currently works as a condition classification model.  
+It predicts whether a CNC tool is likely healthy or worn based on sensor and process data.
+
+The model does not yet estimate failure time or Remaining Useful Life (RUL). It is focused on classifying the current tool condition.
+
+## Next Development Step
+
+The next practical step is to turn the trained model into a usable prediction service.
+
+Planned work for the next version:
+
+1. Save the trained model using `joblib`.
+2. Create a FastAPI endpoint for model prediction.
+3. Accept CNC sensor and process values as JSON input.
+4. Return a prediction such as `healthy` or `worn`.
+5. Add example API requests and responses to the README.
+6. Move reusable preprocessing and prediction logic from the notebook into Python scripts.
+
 
 ---
 
